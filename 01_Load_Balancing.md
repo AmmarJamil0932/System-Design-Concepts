@@ -3,13 +3,14 @@
 ##  Definition
 Load balancing is a method used to share incoming traffic evenly across multiple servers. 
 This means that no single server is doing all the work, which helps the system run more smoothly and quickly.
+![image](https://github.com/user-attachments/assets/67f4733f-8c3c-4bfe-9200-93e43cf6aaca)
 
 ##  Why It’s Important
 In large systems, thousands or even millions of users can send requests at the same time. 
 If one server handles all the requests, it can get slow or crash. Load balancing helps by 
 spreading the traffic to multiple servers so everything works faster and stays online.
 
-## ⚙ How It Works
+## How It Works
 A load balancer sits between users and the servers. When a user sends a request, 
 the load balancer chooses one of the servers to handle it. It can do this using different
 methods like Round Robin (taking turns), Least Connections (choosing the server with the fewest
