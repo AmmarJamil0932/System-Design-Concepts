@@ -3,6 +3,8 @@
 ##  Definition
 Caching is a technique used to store copies of frequently used data in a temporary storage area. 
 This allows systems to quickly serve future requests for the same data without needing to fetch it again from the original source.
+![image](https://github.com/user-attachments/assets/e72b7bdf-794f-4795-8915-326bcacfd68f)
+
 
 ##  Why It’s Important
 Every time a user visits a page or requests information, the system might have to access a database or perform a complex calculation. 
