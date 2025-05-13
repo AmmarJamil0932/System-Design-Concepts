@@ -26,7 +26,7 @@ This is known as a “stale cache.” Also, too much caching can use a lot of me
 
 ##  When to Use / When Not To
 Caching is useful when your application frequently serves the same data, like product details or blog pages. 
-However, avoid caching when the data changes very frequently or needs to be 100% real-time, like live stock prices or transaction data.
+However, avoid caching when the data changes very frequently or needs to be 100% real-time, like live stock prices or transaction-data.
 
 ##  Further Reading
 - [How Caching Works (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
