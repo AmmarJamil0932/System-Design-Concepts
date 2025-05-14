@@ -3,7 +3,6 @@
 ##  Definition
 Database sharding is a method of splitting a large database into smaller, more manageable pieces called "shards." 
 Each shard holds a portion of the data, and together, all the shards make up the full database.
-![image](https://github.com/user-attachments/assets/example-sharding-diagram)
 
 ##  Why It’s Important
 As the amount of data grows, a single database can become slow and overloaded. 
