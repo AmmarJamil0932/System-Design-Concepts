@@ -1,0 +1,33 @@
+# Database Sharding
+
+##  Definition
+Database sharding is a method of splitting a large database into smaller, more manageable pieces called "shards." 
+Each shard holds a portion of the data, and together, all the shards make up the full database.
+![image](https://github.com/user-attachments/assets/example-sharding-diagram)
+
+##  Why It’s Important
+As the amount of data grows, a single database can become slow and overloaded. 
+Sharding helps improve performance and scalability by allowing the system to store and query smaller datasets in parallel across multiple servers.
+
+## How It Works
+Instead of storing everything in one database, the data is divided based on a certain rule. 
+For example, users with IDs from 1–1000 go to one shard, 1001–2000 to another, and so on. 
+When a request is made, the system knows which shard to look in based on the rule, which makes querying faster and more efficient.
+
+##  Real-world Examples
+Social media platforms like Facebook and Twitter use sharding to manage billions of user records. 
+Each user’s data is stored in a different shard so that no single database is overwhelmed. 
+This allows them to serve millions of users at the same time.
+
+##  Trade-offs
+Sharding adds complexity to your system. It’s harder to manage relationships between data stored in different shards. 
+Also, if the sharding logic is not well designed, some shards can become "hotspots" and receive more traffic than others, leading to imbalance.
+
+##  When to Use / When Not To
+Sharding is useful when your database grows so large that a single server can’t handle the load or storage. 
+However, it’s not needed for small projects or systems where simple replication or indexing is enough to maintain performance.
+
+##  Further Reading
+- [Sharding in MongoDB](https://www.mongodb.com/docs/manual/sharding/)
+- [YouTube: Database Sharding Explained](https://www.youtube.com/watch?v=3QhU9jd03a0)
+- [DigitalOcean: Introduction to Database Sharding](https://www.digitalocean.com/community/tutorials/understanding-database-sharding)
