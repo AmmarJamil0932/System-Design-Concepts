@@ -30,7 +30,8 @@ Use replication when your system needs high availability, faster reads, or prote
 Avoid using it for very small applications where the added complexity isn’t worth it, or when you require
 very strict real-time consistency.
 
-##  Further Reading
+## Further Reading
 - [MySQL Replication Documentation](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
 - [YouTube: Database Replication Explained](https://www.youtube.com/watch?v=Kc6KjA1V1rA)
 - [AWS RDS Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
+
