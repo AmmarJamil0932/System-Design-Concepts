@@ -1,0 +1,36 @@
+# Replication
+
+##  Definition
+Replication is the process of copying data from one database server (called the master or primary) 
+to one or more other servers (called replicas or secondaries). This helps ensure that the same data 
+is available in multiple places.
+
+##  Why It’s Important
+If your main server goes down or becomes slow, users can still access the data from a replica. 
+Replication increases data availability, system reliability, and allows read operations to be 
+spread across multiple servers, which reduces load on the main server.
+
+## How It Works
+In most setups, the primary server handles all data changes (inserts, updates, deletes). 
+These changes are then automatically copied to the replica servers. 
+Read requests can be sent to any replica, while writes usually go to the primary. 
+This setup is often called "asynchronous replication."
+
+##  Real-world Examples
+Large services like YouTube, Instagram, and LinkedIn use replication so that users around the world
+can read data quickly from the nearest replica. Cloud databases like Amazon RDS and Google Cloud SQL 
+also offer built-in replication for high availability.
+
+##  Trade-offs
+Replication can lead to data inconsistency if replicas lag behind the primary (called replication lag). 
+Also, you have to handle failover — switching to a replica when the primary fails — which adds extra logic to your system.
+
+##  When to Use / When Not To
+Use replication when your system needs high availability, faster reads, or protection from server failure. 
+Avoid using it for very small applications where the added complexity isn’t worth it, or when you require
+very strict real-time consistency.
+
+##  Further Reading
+- [MySQL Replication Documentation](https://dev.mysql.com/doc/refman/8.0/en/replication.html)
+- [YouTube: Database Replication Explained](https://www.youtube.com/watch?v=Kc6KjA1V1rA)
+- [AWS RDS Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
