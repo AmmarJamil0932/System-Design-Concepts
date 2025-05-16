@@ -2,7 +2,7 @@
 
 ##  Definition
 The CAP Theorem is a principle in distributed systems that states it is impossible for a system to guarantee
-all three of the following at the same time: **Consistency**, **Availability**, and **Partition Tolerance**.
+all three of the following at the same time: Consistency,Availability, and Partition Tolerance.
 You can only choose two out of the three.
 
 
