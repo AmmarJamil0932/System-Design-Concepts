@@ -1,0 +1,32 @@
+# CAP Theorem
+
+##  Definition
+The CAP Theorem is a principle in distributed systems that states it is impossible for a system to guarantee
+all three of the following at the same time: **Consistency**, **Availability**, and **Partition Tolerance**. You can only choose two out of the three.
+
+
+##  Why It’s Important
+Distributed systems like cloud databases often have to work even when parts of the network fail. The CAP Theorem helps developers understand the trade-offs they must make when building such systems. It explains why some systems prioritize availability while others focus on consistency.
+
+## How It Works
+- **Consistency** means every user sees the same data, even if they access it from different servers.
+- **Availability** means every request gets a response, even if it might not be the most recent data.
+- **Partition Tolerance** means the system continues to work even when there are network failures between servers.
+
+The theorem says you can only fully achieve two at a time. For example, if you want consistency and availability, your system may not tolerate network partitions well.
+
+##  Real-world Examples
+- **CP Systems (Consistency + Partition Tolerance):** HBase, MongoDB (in some settings)
+- **AP Systems (Availability + Partition Tolerance):** CouchDB, Cassandra
+- **CA Systems (Consistency + Availability):** These are possible only when the system is not distributed (i.e., no partition).
+
+##  Trade-offs
+You must decide which two properties are most important based on your application. For example, a banking system must be consistent, while a messaging app may favor availability. Choosing the wrong combination can lead to poor user experience or even data loss.
+
+##  When to Use / When Not To
+Use the CAP Theorem as a guiding principle when designing any system that will be distributed or run across multiple servers. It’s not useful for simple, single-server applications. Also, it does not mean you get zero of the third property — it means you may have to compromise on it during failures.
+
+##  Further Reading
+- [CAP Theorem Explained (AWS Blog)](https://aws.amazon.com/builders-library/the-cap-theorem/)
+- [Martin Kleppmann: A Critique of the CAP Theorem](https://martin.kleppmann.com/2015/05/15/cap-theorem.html)
+- [YouTube: CAP Theorem Simplified](https://www.youtube.com/watch?v=k-Yaq8AHlFA)
