@@ -20,9 +20,9 @@ The theorem says you can only fully achieve two at a time. For example, if you w
 your system may not tolerate network partitions well.
 
 ##  Real-world Examples
-- **CP Systems (Consistency + Partition Tolerance):** HBase, MongoDB (in some settings)
-- **AP Systems (Availability + Partition Tolerance):** CouchDB, Cassandra
-- **CA Systems (Consistency + Availability):** These are possible only when the system is not distributed (i.e., no partition).
+- **CP Systems (Consistency + Partition Tolerance): -> HBase, MongoDB (in some settings)
+- **AP Systems (Availability + Partition Tolerance): -> CouchDB, Cassandra
+- **CA Systems (Consistency + Availability): -> These are possible only when the system is not distributed (i.e., no partition).
 
 ##  Trade-offs
 You must decide which two properties are most important based on your application. For example, a banking system mus
@@ -31,10 +31,10 @@ e or even data loss.
 
 ##  When to Use / When Not To
 Use the CAP Theorem as a guiding principle when designing any system that will be distributed or run across multiple servers
-. It’s not useful for simple, single-server applications. Also, it does not mean you get zero of the third property — it means
+. It’s not useful for simple, single-server applications. Also, it does not mean you get zero of the third property, it means
 you may have to compromise on it during failures.
 
 ##  Further Reading
-(https://aws.amazon.com/builders-library/the-cap-theorem/)
-(https://martin.kleppmann.com/2015/05/15/cap-theorem.html)
-(https://www.youtube.com/watch?v=k-Yaq8AHlFA)
+https://aws.amazon.com/builders-library/the-cap-theorem/
+https://martin.kleppmann.com/2015/05/15/cap-theorem.html
+https://www.youtube.com/watch?v=k-Yaq8AHlFA
