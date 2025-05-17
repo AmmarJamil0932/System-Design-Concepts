@@ -3,7 +3,6 @@
 ##  Definition
 Consistent hashing is a technique used to evenly distribute data across a dynamic set of servers or nodes. 
 It helps ensure that when nodes are added or removed, only a small portion of the data needs to be rearranged.
-![image](https://github.com/user-attachments/assets/example-consistent-hashing-diagram)
 
 ##  Why It’s Important
 In distributed systems, data needs to be split and stored across multiple servers. 
