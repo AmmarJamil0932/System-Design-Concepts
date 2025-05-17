@@ -30,6 +30,6 @@ Use consistent hashing when your system has many servers that may come and go, l
 For small static systems with few nodes, simpler hashing methods may be easier to manage.
 
 ##  Further Reading
-- [Consistent Hashing (Wikipedia)](https://en.wikipedia.org/wiki/Consistent_hashing)
-- [YouTube: Consistent Hashing Explained](https://www.youtube.com/watch?v=Uj3_KqkI9Zo)
-- [Engineering at Facebook: Consistent Hashing at Scale](https://engineering.fb.com/2021/11/08/production-engineering/consistent-hashing/)
+https://en.wikipedia.org/wiki/Consistent_hashing  
+https://www.youtube.com/watch?v=Uj3_KqkI9Zo  
+https://engineering.fb.com/2021/11/08/production-engineering/consistent-hashing/
