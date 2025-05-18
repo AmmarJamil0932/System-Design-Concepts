@@ -1,35 +1,33 @@
-# Consistent Hashing
+# Message Queues
 
 ##  Definition
-Consistent hashing is a technique used to evenly distribute data across a dynamic set of servers or nodes. 
-It helps ensure that when nodes are added or removed, only a small portion of the data needs to be rearranged.
-![image](https://github.com/user-attachments/assets/example-consistent-hashing-diagram)
+A message queue is a system that allows different parts of an application to communicate with each other by sending messages through a queue. 
+It helps separate the sender and receiver so they don’t have to work at the same time.
 
 ##  Why It’s Important
-In distributed systems, data needs to be split and stored across multiple servers. 
-If we use simple hashing (like modulo), adding or removing a server changes the hash result for almost all data. 
-Consistent hashing avoids this problem and allows systems to scale smoothly without much data movement.
+In large systems, different services might run at different speeds. 
+A message queue allows the fast parts to keep working without waiting for slower parts. 
+It also improves reliability by storing messages temporarily in case the receiving service is down.
 
 ## How It Works
-All servers and data keys are placed on a circle (also called a hash ring) using a hash function. 
-A key is stored on the first server that comes after it in the clockwise direction on the ring. 
-If a server is removed, only the keys on that server need to be reassigned, not all keys. 
-To improve balance, each server is often represented multiple times on the ring using “virtual nodes.”
+A producer sends a message to the queue, and a consumer takes the message from the queue and processes it. 
+The queue holds messages until they are read. 
+Some queues support features like retries, dead-letter queues (for failed messages), and message acknowledgments to ensure messages aren’t lost.
 
 ##  Real-world Examples
-Distributed databases and caching systems like Amazon DynamoDB, Apache Cassandra, and Memcached use consistent hashing. 
-It helps these systems manage large amounts of data while allowing nodes to join or leave without disrupting the entire system.
+Companies like Uber and Netflix use message queues to manage background tasks like sending notifications, processing payments, or handling uploads. 
+Popular message queue systems include RabbitMQ, Apache Kafka, and Amazon SQS.
 
 ##  Trade-offs
-Consistent hashing is more complex to implement than basic hashing. 
-It may still cause some imbalance in data distribution if not enough virtual nodes are used. 
-Also, lookup times can be slightly longer due to the ring traversal logic.
+While message queues increase flexibility and reliability, they also add complexity. 
+You must handle retries, message ordering, and sometimes duplicate processing. 
+Debugging across systems can also become harder.
 
 ##  When to Use / When Not To
-Use consistent hashing when your system has many servers that may come and go, like in peer-to-peer networks, distributed caches, or cloud services. 
-For small static systems with few nodes, simpler hashing methods may be easier to manage.
+Use message queues when you need to decouple services, handle tasks in the background, or smooth out spikes in traffic. 
+Avoid them for very simple apps where direct function calls or HTTP requests are enough.
 
 ##  Further Reading
-https://en.wikipedia.org/wiki/Consistent_hashing  
-https://www.youtube.com/watch?v=Uj3_KqkI9Zo  
-https://engineering.fb.com/2021/11/08/production-engineering/consistent-hashing/
+https://kafka.apache.org/intro  
+https://www.rabbitmq.com/tutorials/tutorial-one-python.html  
+https://aws.amazon.com/sqs/
