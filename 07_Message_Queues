@@ -1,0 +1,35 @@
+# Consistent Hashing
+
+##  Definition
+Consistent hashing is a technique used to evenly distribute data across a dynamic set of servers or nodes. 
+It helps ensure that when nodes are added or removed, only a small portion of the data needs to be rearranged.
+![image](https://github.com/user-attachments/assets/example-consistent-hashing-diagram)
+
+##  Why It’s Important
+In distributed systems, data needs to be split and stored across multiple servers. 
+If we use simple hashing (like modulo), adding or removing a server changes the hash result for almost all data. 
+Consistent hashing avoids this problem and allows systems to scale smoothly without much data movement.
+
+## How It Works
+All servers and data keys are placed on a circle (also called a hash ring) using a hash function. 
+A key is stored on the first server that comes after it in the clockwise direction on the ring. 
+If a server is removed, only the keys on that server need to be reassigned, not all keys. 
+To improve balance, each server is often represented multiple times on the ring using “virtual nodes.”
+
+##  Real-world Examples
+Distributed databases and caching systems like Amazon DynamoDB, Apache Cassandra, and Memcached use consistent hashing. 
+It helps these systems manage large amounts of data while allowing nodes to join or leave without disrupting the entire system.
+
+##  Trade-offs
+Consistent hashing is more complex to implement than basic hashing. 
+It may still cause some imbalance in data distribution if not enough virtual nodes are used. 
+Also, lookup times can be slightly longer due to the ring traversal logic.
+
+##  When to Use / When Not To
+Use consistent hashing when your system has many servers that may come and go, like in peer-to-peer networks, distributed caches, or cloud services. 
+For small static systems with few nodes, simpler hashing methods may be easier to manage.
+
+##  Further Reading
+https://en.wikipedia.org/wiki/Consistent_hashing  
+https://www.youtube.com/watch?v=Uj3_KqkI9Zo  
+https://engineering.fb.com/2021/11/08/production-engineering/consistent-hashing/
