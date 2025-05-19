@@ -3,7 +3,6 @@
 ##  Definition
 Rate limiting is a technique used to control how many requests a user or system can make in a given time period. 
 It helps prevent abuse, reduce server overload, and ensure fair usage of resources.
-![image](https://github.com/user-attachments/assets/example-rate-limiting-diagram)
 
 ##  Why It’s Important
 Without rate limiting, a user or bot could send thousands of requests per second, which could slow down or crash your system. 
