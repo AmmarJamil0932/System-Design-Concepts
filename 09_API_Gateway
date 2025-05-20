@@ -3,7 +3,6 @@
 ##  Definition
 An API Gateway is a server that acts as the single entry point for all client requests to a system’s backend services. 
 It routes requests, applies security policies, and manages tasks like logging, rate limiting, and authentication.
-![image](https://github.com/user-attachments/assets/example-api-gateway-diagram)
 
 ##  Why It’s Important
 In microservices architecture, there are many backend services. 
