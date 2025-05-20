@@ -1,0 +1,34 @@
+# API Gateway
+
+##  Definition
+An API Gateway is a server that acts as the single entry point for all client requests to a system’s backend services. 
+It routes requests, applies security policies, and manages tasks like logging, rate limiting, and authentication.
+![image](https://github.com/user-attachments/assets/example-api-gateway-diagram)
+
+##  Why It’s Important
+In microservices architecture, there are many backend services. 
+Letting users call each service directly is messy and insecure. 
+An API Gateway simplifies this by handling all requests in one place and forwarding them to the correct service.
+
+## How It Works
+Clients send all their API requests to the gateway. 
+The gateway then checks if the request is allowed, applies security rules, and routes the request to the right service. 
+It can also combine responses from multiple services (called request aggregation) before sending a single response back to the client.
+
+##  Real-world Examples
+Companies like Netflix and Amazon use API gateways to manage traffic from millions of users. 
+Popular tools include Amazon API Gateway, Kong, NGINX, and Zuul (used by Netflix).
+
+##  Trade-offs
+While API Gateways improve security and manageability, they add a single point of failure. 
+If the gateway crashes, the entire system becomes inaccessible. 
+They can also add some latency to each request.
+
+##  When to Use / When Not To
+Use an API Gateway when your system has multiple services or when you need to apply consistent policies across all APIs. 
+Avoid it in very simple applications where one client talks to one backend.
+
+##  Further Reading
+https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html  
+https://konghq.com/api-gateway/  
+https://www.nginx.com/learn/api-gateway/
