@@ -3,7 +3,6 @@
 ##  Definition
 Microservices is an architectural style where a large application is broken into smaller, independent services. 
 Each service focuses on a single business function and communicates with others through APIs.
-![image](https://github.com/user-attachments/assets/example-microservices-diagram)
 
 ##  Why It’s Important
 Microservices make it easier to build, scale, and maintain large systems. 
