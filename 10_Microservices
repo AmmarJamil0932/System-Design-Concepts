@@ -1,0 +1,33 @@
+# Microservices
+
+##  Definition
+Microservices is an architectural style where a large application is broken into smaller, independent services. 
+Each service focuses on a single business function and communicates with others through APIs.
+![image](https://github.com/user-attachments/assets/example-microservices-diagram)
+
+##  Why It’s Important
+Microservices make it easier to build, scale, and maintain large systems. 
+Each service can be developed, tested, deployed, and updated independently, allowing faster releases and better fault isolation.
+
+## How It Works
+Instead of one large application (monolith), the system is split into many smaller services. 
+For example, in an e-commerce system, one service handles payments, another handles inventory, and another handles user accounts. 
+Services communicate over protocols like HTTP or messaging queues.
+
+##  Real-world Examples
+Companies like Amazon, Netflix, and Spotify use microservices to build and scale their applications. 
+Netflix has hundreds of microservices that work together to stream movies and TV shows to millions of users.
+
+##  Trade-offs
+Microservices can introduce complexity. 
+Managing many services, handling network issues, data consistency, and debugging across services can be challenging. 
+You also need tools for service discovery, monitoring, and deployment.
+
+##  When to Use / When Not To
+Use microservices when building large applications with multiple teams or when you need to scale different parts of your system independently. 
+Avoid them for small projects where a simple monolithic design is faster and easier to manage.
+
+##  Further Reading
+https://microservices.io/  
+https://martinfowler.com/articles/microservices.html  
+https://aws.amazon.com/microservices/
