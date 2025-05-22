@@ -3,7 +3,6 @@
 ##  Definition
 Service discovery is the process of automatically finding the network location (IP and port) of services in a distributed system. 
 It allows services to communicate with each other without needing hardcoded addresses.
-![image](https://github.com/user-attachments/assets/example-service-discovery-diagram)
 
 ##  Why It’s Important
 In systems with microservices, services often start and stop, change locations, or scale up and down. 
