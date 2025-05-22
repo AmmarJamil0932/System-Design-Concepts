@@ -1,0 +1,36 @@
+# Service Discovery
+
+##  Definition
+Service discovery is the process of automatically finding the network location (IP and port) of services in a distributed system. 
+It allows services to communicate with each other without needing hardcoded addresses.
+![image](https://github.com/user-attachments/assets/example-service-discovery-diagram)
+
+##  Why It’s Important
+In systems with microservices, services often start and stop, change locations, or scale up and down. 
+Manually keeping track of these changes is not practical. 
+Service discovery automates this and ensures services can always find and talk to each other.
+
+## How It Works
+There are usually two parts: a **service registry** and **service consumers**. 
+When a service starts, it registers its location with the registry (like Consul or Eureka). 
+Other services ask the registry when they need to connect. 
+Discovery can be done either client-side (clients do the lookup) or server-side (a gateway does it).
+
+##  Real-world Examples
+Netflix uses Eureka for service discovery in its microservice environment. 
+Consul by HashiCorp is another popular tool that manages service registration and health checking. 
+Kubernetes also includes built-in service discovery through DNS.
+
+##  Trade-offs
+Service discovery adds a layer of complexity and requires maintaining a reliable registry. 
+If the registry fails or becomes outdated, services may not find each other. 
+Also, in large systems, frequent updates can overload the registry.
+
+##  When to Use / When Not To
+Use service discovery when your system includes many services that scale or change frequently. 
+Avoid it for small static systems where service locations don’t change and can be manually configured.
+
+##  Further Reading
+https://developer.hashicorp.com/consul/docs/discovery  
+https://netflix.github.io/eureka/  
+https://kubernetes.io/docs/concepts/services-networking/service/
