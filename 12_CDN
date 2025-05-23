@@ -1,0 +1,30 @@
+# Content Delivery Networks (CDNs)
+
+##  Definition
+A Content Delivery Network (CDN) is a group of distributed servers placed in different locations that deliver web content 
+(like images, videos, or scripts) to users from the server closest to them.
+
+##  Why It’s Important
+When users are far from your main server, loading content can be slow. CDNs speed up delivery by serving content from a nearby
+server. This improves user experience and reduces load on your origin server.
+
+## How It Works
+When a user requests a file, the CDN checks if it already has a cached copy. If yes, it serves the file from the nearest edge server.
+If not, it fetches it from the original server, saves a copy, and delivers it. Future users near that location will get the cached version.
+
+##  Real-world Examples
+Popular websites like YouTube, Facebook, and Amazon use CDNs to serve videos, images, and scripts quickly across the globe. Major 
+CDN providers include Cloudflare, Akamai, AWS CloudFront, and Google Cloud CDN.
+
+##  Trade-offs
+While CDNs improve speed and reduce bandwidth usage, they can introduce complexity in cache invalidation and version control.
+Also, there's a cost involved, especially for large-scale usage.
+
+##  When to Use / When Not To
+Use a CDN when your app has users in multiple regions or serves large static files like images and videos. It’s also useful for
+reducing load on your origin server. Avoid it for fully dynamic data that changes too frequently or small internal apps.
+
+##  Further Reading
+https://www.cloudflare.com/learning/cdn/what-is-a-cdn/  
+https://aws.amazon.com/cloudfront/  
+https://developer.mozilla.org/en-US/docs/Glossary/CDN
