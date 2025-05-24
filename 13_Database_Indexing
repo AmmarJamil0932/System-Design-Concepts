@@ -1,0 +1,30 @@
+# Database Indexing
+
+##  Definition
+Database indexing is a technique used to speed up the retrieval of data from a database. 
+It works like an index in a book — instead of scanning every row, the database uses the index to quickly find the needed data.
+
+##  Why It’s Important
+Without indexes, searching in a large database can be very slow because the system has to check every row. 
+Indexes make searches faster by allowing the system to jump directly to the right data location, improving performance for queries.
+
+## How It Works
+When an index is created on a column, the database builds a special data structure (often a B-tree or a hash map) that maps values to their row locations. 
+During a query, the system checks this index instead of the full table, retrieves the location, and then fetches the row directly.
+
+##  Real-world Examples
+Most relational databases like MySQL, PostgreSQL, and Oracle support indexing. 
+For example, if you frequently search users by email, creating an index on the email column will make those queries much faster.
+
+##  Trade-offs
+While indexes speed up read operations, they make write operations (INSERT, UPDATE, DELETE) slightly slower because the index must also be updated. 
+Indexes also use extra storage space. Too many indexes can slow down the overall system.
+
+##  When to Use / When Not To
+Use indexing on columns that are often searched, sorted, or used in JOINs. 
+Avoid indexing columns that change frequently or are rarely used in queries, as maintaining such indexes will add unnecessary overhead.
+
+##  Further Reading
+https://use-the-index-luke.com/  
+https://www.postgresql.org/docs/current/indexes.html  
+https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html
