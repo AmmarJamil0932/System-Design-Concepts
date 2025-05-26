@@ -1,0 +1,31 @@
+# Eventual Consistency
+
+##  Definition
+Eventual consistency is a data consistency model used in distributed systems where updates to a piece of data will reach all nodes, but not instantly. 
+Over time, all nodes will eventually have the same data.
+
+##  Why It’s Important
+In distributed systems, especially ones with high availability, it's often not possible to update all copies of data immediately. 
+Eventual consistency allows the system to keep working even during network delays or failures, ensuring that updates will sync later.
+
+## How It Works
+When data is updated, the system applies the change to one or more nodes. 
+Other nodes may temporarily have outdated data. 
+Background processes or synchronization protocols then update the remaining nodes over time, ensuring they eventually match.
+
+##  Real-world Examples
+Systems like Amazon DynamoDB, Apache Cassandra, and Couchbase use eventual consistency. 
+For example, when you post a comment on a social media platform, you might see it immediately, but others may see it a few seconds later due to eventual consistency.
+
+##  Trade-offs
+The main drawback is that users might read outdated (stale) data for a short time. 
+However, this model allows for better performance, fault tolerance, and availability in distributed environments.
+
+##  When to Use / When Not To
+Use eventual consistency when your system can tolerate slight delays in data synchronization — like social media, logging, or recommendation systems. 
+Avoid it in systems where accurate, up-to-date data is critical, such as banking or online transactions.
+
+##  Further Reading
+https://en.wikipedia.org/wiki/Eventual_consistency  
+https://aws.amazon.com/nosql/eventual-consistency/  
+https://www.confluent.io/blog/strong-vs-eventual-consistency-in-distributed-systems/
