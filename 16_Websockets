@@ -1,0 +1,31 @@
+# WebSockets
+
+##  Definition
+WebSockets is a communication protocol that allows a continuous, two-way connection between a client (like a browser) and a server. 
+Unlike regular HTTP requests, WebSockets stay open and allow real-time data exchange.
+
+##  Why It’s Important
+WebSockets enable live interactions such as chat messages, stock price updates, notifications, or multiplayer gaming. 
+They reduce the delay and overhead of making a new HTTP request for every update.
+
+## How It Works
+After an initial handshake using HTTP, the connection is upgraded to WebSocket. 
+From then on, both the client and server can send and receive messages anytime over the same open connection. 
+This reduces latency and improves responsiveness.
+
+##  Real-world Examples
+WebSockets are used by apps like WhatsApp Web, Slack, online gaming platforms, trading dashboards, and live sports score updates. 
+Any app that shows real-time information can benefit from WebSockets.
+
+##  Trade-offs
+WebSockets keep a connection open, which uses more server resources compared to stateless HTTP. 
+They can also be harder to scale and secure, especially with firewalls or load balancers that don't support them well.
+
+##  When to Use / When Not To
+Use WebSockets for apps that need live updates, like messaging, games, or dashboards. 
+Avoid them for simple apps with mostly static content or occasional user interaction where regular HTTP is sufficient.
+
+##  Further Reading
+https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API  
+https://ably.com/topic/websockets  
+https://websockets.spec.whatwg.org/
