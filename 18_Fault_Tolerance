@@ -1,0 +1,31 @@
+# Fault Tolerance
+
+##  Definition
+Fault tolerance is the ability of a system to continue working properly even if some parts of it fail. 
+It ensures that the system stays available and reliable despite hardware or software problems.
+
+##  Why It’s Important
+In real-world systems, failures happen — servers crash, networks go down, and bugs occur. 
+Fault-tolerant systems are built to handle these problems gracefully, so users don’t experience downtime or data loss.
+
+## How It Works
+Fault tolerance is achieved using techniques like redundancy (backup servers), replication, health checks, retries, and failover mechanisms. 
+If one component fails, another one takes over without interrupting the service.
+
+##  Real-world Examples
+Cloud providers like AWS, Google Cloud, and Azure offer fault-tolerant services. 
+For example, if one data center has an issue, your app might automatically switch to another data center without the user noticing.
+
+##  Trade-offs
+Building a fault-tolerant system adds cost and complexity. 
+You need extra servers, monitoring systems, and careful design. 
+Also, handling partial failures and synchronizing backups can be tricky.
+
+##  When to Use / When Not To
+Use fault tolerance when your system must be highly available — like banking, healthcare, or e-commerce platforms. 
+For personal or non-critical apps, basic error handling may be enough.
+
+##  Further Reading
+https://en.wikipedia.org/wiki/Fault_tolerance  
+https://aws.amazon.com/builders-library/reliability-principles/  
+https://www.geeksforgeeks.org/fault-tolerance-in-distributed-systems/
