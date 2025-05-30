@@ -1,0 +1,32 @@
+# Monitoring
+
+##  Definition
+Monitoring is the process of observing and tracking the performance, health, and behavior of a system in real-time. 
+It helps detect issues, measure usage, and ensure everything is running as expected.
+
+##  Why It’s Important
+Monitoring helps you know if something is wrong before your users do. 
+It allows you to catch errors, slow responses, or high resource usage early, so you can fix problems quickly and avoid downtime.
+
+## How It Works
+Monitoring tools collect data like CPU usage, memory, errors, response times, and more. 
+They display this information in dashboards and send alerts if something unusual happens. 
+There are two types of monitoring: system monitoring (infrastructure) and application monitoring (code-level performance).
+
+##  Real-world Examples
+Companies like Netflix and Google use tools like Prometheus, Grafana, New Relic, and Datadog to monitor their systems. 
+For example, if a server gets overloaded, an alert is triggered and the issue is investigated immediately.
+
+##  Trade-offs
+Setting up monitoring requires time, tools, and configuration. 
+Too many alerts can overwhelm teams (alert fatigue), and poor dashboard design may hide critical information. 
+Choosing what to monitor and setting the right thresholds is key.
+
+##  When to Use / When Not To
+Monitoring is essential for any production system, even small ones. 
+For personal projects, simple logging or basic uptime checks might be enough, but for apps with users, real monitoring is a must.
+
+##  Further Reading
+https://prometheus.io/docs/introduction/overview/  
+https://grafana.com/docs/grafana/latest/monitoring/  
+https://www.datadoghq.com/solutions/infrastructure-monitoring/
