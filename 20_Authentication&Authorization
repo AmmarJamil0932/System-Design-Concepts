@@ -1,0 +1,33 @@
+# Authentication & Authorization
+
+##  Definition
+Authentication is the process of verifying who a user is (identity), while authorization determines what that user is allowed to do (permissions). 
+Both are critical for securing applications and data.
+
+##  Why It’s Important
+Without proper authentication and authorization, unauthorized users could access, change, or delete sensitive data. 
+These processes protect systems from misuse, data leaks, and cyber attacks.
+
+## How It Works
+- **Authentication** usually happens first — the user provides credentials (like username and password) to prove their identity.
+- **Authorization** comes after — the system checks what resources or actions the authenticated user is allowed to access.
+
+This is often managed using sessions, tokens (like JWT), or OAuth providers (like Google or Facebook).
+
+##  Real-world Examples
+Almost every app with user accounts uses authentication and authorization — Gmail, Facebook, banking apps, and admin dashboards. 
+OAuth is commonly used to let users log in using Google or GitHub without creating new passwords.
+
+##  Trade-offs
+Implementing auth systems adds complexity. 
+You must handle password storage, session expiration, token security, and multi-factor authentication. 
+Poorly implemented systems can become security risks.
+
+##  When to Use / When Not To
+Use authentication and authorization for any app that handles user-specific data, payments, admin access, or personal content. 
+You may skip it for completely public, read-only websites or demo apps with no private data.
+
+##  Further Reading
+https://auth0.com/intro-to-iam/authentication-and-authorization  
+https://jwt.io/introduction  
+https://developer.mozilla.org/en-US/docs/Web/Security/Authentication
